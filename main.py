@@ -3,7 +3,7 @@ def q1():
     intervalo = int(input("Intervalo: "))
 
     for i in range(1, 5):
-        print(f" {ano + i * intervalo}", end="")
+        print(f"{ano + i * intervalo} ", end="")
 
     pass
 
@@ -21,43 +21,46 @@ def q2():
         if num == -1:
             break
         if primo(num):
-            print("É primo")
+            print("Primo")
         else:
-            print("Não é")
+            print("Não")
 
     pass
 
 def q3():
-   total = 0
-quantidade = 0
+    soma = 0
+    doador = 0
 
-while True:
-    valor = float(int(input("Valor da doação: ")))
-    if valor < 0:
-        break
-    total += valor
-    quantidade += 1
+    while True:
+        doacao = float(input("valor da doação: "))
+        if doacao < 0:
+            break
+        soma += doacao
+        doador += 1
 
-if quantidade > 0:
-    media = total / quantidade
-    print(f"{total:.2f}")
-    print(f"{media:.2f}")
-else:
-    print("Nenhuma doação realizada.")
+    if doador == 0:
+        print("0.00")
+        print("0.00")
+    else:
+        media = soma / doador
+        print(f"{soma:.2f}")
+        print(f"{media:.2f}")
+
+        
+
 
     pass
 
 def q4():
     dias = int(input("Quantidade de dias: "))
-    km = float(input("Quilometragem total rodada: "))
+    km = float(input("Km total rodada: "))
 
     cota = dias * 100
     excedente = max(0, km - cota)
     valor = dias * 90 + excedente * 12
 
-    print(f"Valor total a pagar: R$ {valor:.2f}")
+    print(f"{valor:.2f}")
 
-    
     pass
 
 def q5():
@@ -87,5 +90,5 @@ def q5():
 
     pass
 
-if __name__=="__main__":
+if __name__ == "__main__":
     q1()
