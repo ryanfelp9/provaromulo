@@ -56,10 +56,15 @@ def q4():
     km = float(input("Km total rodada: "))
 
     cota = dias * 100
-    excedente = max(0, km - cota)
+    if km > cota:
+        excedente = km - cota
+    else:
+        excedente = 0
+
     valor = dias * 90 + excedente * 12
 
     print(f"{valor:.2f}")
+
 
     pass
 
